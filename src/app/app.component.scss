@@ -1,0 +1,68 @@
+@import '../assets/styles/variables';
+
+$aside-w : 30%;
+$aside-p : 35px;
+$hearder: 60px;
+
+aside{
+    background: $background;
+    height: 100%;
+    width: $aside-w;
+    position: fixed;
+    border-right: $border;
+    overflow: auto;
+    section{
+        padding: 0 $aside-p;
+        .list-group{
+            li{
+                padding:25px  0;
+            }
+        }
+    }
+}
+main{
+    width: calc(100% - #{$aside-w});
+    margin-left: $aside-w;
+    >header{
+        padding-left: $aside-p;
+    }
+}
+
+header{
+    border-bottom: $border;
+    line-height: $hearder;
+    height: $hearder;
+}
+
+.content{
+    padding: $aside-p
+}
+
+#filterUsers{
+    margin: 0 $padding*-1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    color:$text-strong;
+    .button,
+    input{
+        background: transparent;
+        border-width: 0px;
+        &[type="search"]{
+            font-style: italic;
+            padding: 0 $aside-p;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+    }
+    .button{
+        right: 0px;
+        height: $hearder;
+        width: $hearder;
+        border-left-width: 1px;
+    }
+}

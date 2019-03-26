@@ -1,0 +1,14 @@
+@import '../../../assets/styles/variables';
+
+.big-number{
+    padding: $padding;
+    display: inline-block;
+    .big-number-label{
+        font-size: $size-small;
+    }
+    .big-number-value{
+        color: $text-strong;
+        font-weight: bold;
+        font-style: italic;
+    }
+}

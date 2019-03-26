@@ -1,0 +1,41 @@
+<section>
+  <header>Adicionar nota</header>
+  <div class="columns">
+      <div class="column">
+        <label for="loja">Loja</label>
+        <input [disabled]="isDisabled" [(ngModel)]="nota.loja" class="input" placeholder="Razão social, nome fantasia ou CNPJ" />
+    </div>
+  </div>
+  <div  class="columns">
+      <div class="column">
+        <label for="notaName">Nome da Nota</label>
+        <input [disabled]="isDisabled" [(ngModel)]="nota.nome" id="notaName" class="input" placeholder="Razão social, nome fantasia ou CNPJ" />
+      </div>
+      <div class="column">
+        <label for="dataNota">Data da Nota</label>
+        <input [disabled]="isDisabled" [(ngModel)]="nota.data" id="dataNota" class="input" placeholder="dd/mm/aaaa" />
+      </div>
+      <div class="column">
+        <label for="formaDePagamento">Forma de pagamento</label>
+        <div id="formaDePagamento" class="select">
+            <select  [disabled]="isDisabled" [(ngModel)]="nota.pagamento" placeholder="Selecionar">
+              <option style="display: none;" selected>Selecionar</option>
+              <option value="Crédito">Crédito</option>
+              <option value="Debito">Debito</option>
+              <option value="Dinheiro">Dinheiro</option>
+            </select>
+          </div>
+      </div>
+      <div class="column">
+        <label for="valor">Valor</label>
+        <input [disabled]="isDisabled" [(ngModel)]="nota.valor" id="valor" class="input" placeholder="R$" />
+      </div>
+  </div>
+  <div  class="columns text-right">
+      <div class="column">
+        <button class="button">Cancelar</button>
+        <button class="button button-primary"  [disabled]="isDisabled || isInvalid()" (click)="save()" >Adicionar</button>
+      </div>
+  </div>
+</section>
+  

@@ -1,0 +1,58 @@
+.select {
+    max-width: 100%;
+    position: relative;
+    vertical-align: top;
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        line-height: 1.5;
+        font-size: 1rem;
+        height: 2.25em;
+        padding-bottom: calc(0.375em - 1px);
+        padding-left: calc(0.625em - 1px);
+        padding-right: calc(0.625em - 1px);
+        padding-top: calc(0.375em - 1px);
+        position: relative;
+        vertical-align: top;
+        background-color: white;
+        border-color: $border-color;
+        color: $text;
+        cursor: pointer;
+        display: block;
+        font-size: 1em;
+        max-width: 100%;
+        outline: none;
+        border: 0;
+        border-bottom: $border;
+        border-radius: 3px;
+        width: 100%;
+        padding-right: 2.25em;
+
+      &:disabled{
+        background: #fbfbfb;
+        cursor: not-allowed;
+    }
+  }
+  &:after{
+    content: '\2C6';
+    display: block;
+    width: 1.25em;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: right;
+    line-height: 1.25em;
+    transform: rotate(180deg);
+  }
+}

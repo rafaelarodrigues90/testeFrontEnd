@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+html{
+    background-color: $body-background-color;
+    font-size: $body-size;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-rendering: $body-rendering;
+    color: $text;
+}
+body, button, input, select, textarea{
+    font-family: $family-primary;
+    font-size: 12px;
+}
+html, body, app-root{
+    height: 100%;
+}
+b{
+    color: $text-strong;
+}

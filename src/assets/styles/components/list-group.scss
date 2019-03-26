@@ -1,0 +1,17 @@
+.list-group{
+    margin: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    li{
+        cursor: pointer;
+        padding: $padding;
+        display: block;
+        border-bottom: $border;
+        &:hover{
+            border-color: $primary
+        }
+    }
+}

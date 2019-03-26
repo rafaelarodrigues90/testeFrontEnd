@@ -1,0 +1,7 @@
+<div class="big-number">
+  <div class="big-number-label">
+    {{label}}
+  </div>
+  <span class="big-number-value" *ngIf="!value"> ---- </span>        
+  <span class="big-number-value" *ngIf="value"> {{value | currency:'BRL':'4.2-2' }} </span>      
+</div>  

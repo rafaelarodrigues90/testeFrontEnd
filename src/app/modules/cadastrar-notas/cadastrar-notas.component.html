@@ -1,0 +1,48 @@
+<section>
+    <header>Cadastrar notas</header>
+    <p class="sub-header">Você precisa confirmar o cadastro dessa linha de notas</p>    
+    <div  class="columns">
+        <div class="column">
+          <table class="table">
+            <thead>
+                <tr>
+                  <th>Loja</th>
+                  <th>No da Nota</th>
+                  <th>Data da nota</th>
+                  <th>Cadastro</th>
+                  <th>Valor</th>
+                  <th class="td-options"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="!notas.length" >
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td> --- </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr *ngFor="let nota of notas" >
+                  <td>{{nota.loja}}</td>
+                  <td>{{nota.id}}</td>
+                  <td>{{nota.data}}</td>
+                  <td>{{nota.nome}}</td>
+                  <td>{{nota.valor}}</td>
+                  <td>
+                    <button class="button button-link fa fa-ellipsis-v"></button>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column text-right">
+            <button class="button button button-lg"> Cancelar </button>
+            <button class="button button-primary button-lg"> Cadastrar </button>
+          </div>
+    </div>
+</section>
+    

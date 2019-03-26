@@ -1,0 +1,14 @@
+header{
+    color: $text-strong;
+    font-weight: bolder;
+    line-height: 2em;
+    font-size: 1.25em;
+    padding: 0 $padding;
+    @at-root section &{
+        font-style: italic;
+    }
+    + .sub-header{
+        padding: 0 18px;
+        margin: 3px 0;
+    }
+}

@@ -1,0 +1,46 @@
+<aside>
+  <cliente-detail *ngIf="clienteSelecionado" [cliente]="clienteSelecionado" (close)="clearSection()"></cliente-detail>    
+  <div *ngIf="!clienteSelecionado">
+    <header>
+        <form id="filterUsers" action="">
+            <input type="search" (input)="onSearchChange($event.target.value)"/>        
+            <button class="button fa fa-search" type="submit"></button>
+        </form>
+      </header>
+      <section>
+        <ul class="list-group">
+          <li *ngFor="let cliente of clientes" (click)="selectClient(cliente)">
+            {{cliente.email}}<br>
+            <b>{{cliente.nome}}</b><br>
+            {{cliente.cpf}}<br>
+          </li>
+        </ul>
+      </section>
+  </div>
+</aside>
+<main>
+  <header>
+    Fidelidade
+  </header>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Transações</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Benefícios</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Historico</a>
+    </li>
+  </ul>
+  <section class="separator">
+    <big-number label="Saldo" [value]="pontos.saldo"></big-number>
+    <big-number label="Historico" [value]="pontos.total"></big-number>
+    <big-number label="Utilizados" [value]="pontos.utilizados"></big-number>
+    <big-number label="Expirados" [value]="pontos.expirados"></big-number>
+  </section>
+  <div class="content">
+    <adicionar-nota [isDisabled]="!clienteSelecionado" (adicionarNota)="adicionarNota($event)"></adicionar-nota>
+    <cadastrar-notas [notas]="notas"></cadastrar-notas>
+  </div>
+</main>  

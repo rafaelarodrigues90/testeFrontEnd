@@ -1,0 +1,15 @@
+input{
+    outline: none;
+    border: 0px;
+    border-bottom: $border;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-top: calc(0.375em - 1px);
+    &:disabled{
+        background: #fbfbfb;
+        cursor: not-allowed;
+    }
+}
+.input{
+    width: 100%;
+}

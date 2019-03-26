@@ -1,0 +1,33 @@
+<div class="avatar-wrapper">
+  <button class="button button-link fa fa-arrow-left" id="back" (click)="goBack()"></button>
+  <img src="{{cliente.thumb}}" class="avatar">
+  <div class="name">{{cliente.nome}}</div>
+  <span>{{cliente.cpf}}. Cód:{{cliente.codigo | number : '3.0'}} </span>
+</div>
+<section>
+  <ul class="list-group">
+      <li>
+        <b>Observações Importantes</b><br/>
+        {{cliente.obs}}
+      </li>
+      <li>
+        <b>Email</b><br/>
+        {{cliente.email}}
+      </li>
+      <li>
+        <b>Telefone</b><br/>
+        {{cliente.telefone.pais}}
+        {{cliente.telefone.area}}
+        {{cliente.telefone.numero}}
+      </li>
+      <li>
+        <b>Endereço</b><br/>
+        {{cliente.endereco.tipo}} 
+        {{cliente.endereco.logradouro}} 
+        {{cliente.endereco.numero}} 
+        {{cliente.endereco.complemento}}
+        {{cliente.endereco.bairro}} <br>
+        {{cliente.endereco.cidade}} - {{cliente.endereco.Estado}}
+      </li>
+  </ul>
+</section>

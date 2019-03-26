@@ -1,0 +1,18 @@
+@media screen and (min-width: 769px), print{
+    .columns:not(.is-desktop) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .column {
+        display: block;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+        padding: $padding/2 $padding;
+    }
+}

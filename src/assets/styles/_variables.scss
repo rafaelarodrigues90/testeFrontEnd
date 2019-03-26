@@ -1,0 +1,35 @@
+// Colors
+
+$background : #f4f5f7;
+$primary: #6eccff;
+$body-background-color: #fff;
+
+// Text colors
+
+$text: #8d8d8d;
+$text-strong: #26323d;
+
+// Typography
+
+$family-primary: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: monospace;
+$render-mode: optimizeLegibility;
+
+$size-small: 0.75rem;
+$size-normal: 1rem;
+$size-medium: 1.25rem;
+$size-large: 1.5rem;
+
+$body-size : 16px;
+$body-rendering: optimizeLegibility;
+
+
+// Misc
+$padding:18px;
+
+$border-size: 1px;
+$border-color: #d9d9d9;
+$border-style: solid;
+$border: $border-size $border-color $border-style;
+
+$fa-font-path : '../node_modules/font-awesome/fonts';

@@ -1,0 +1,73 @@
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: $border;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: white;
+    border-color: #dbdbdb;
+    color: $text;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bolder;
+    &:focus{
+        outline: none;
+    }
+    &:hover:not(:disabled){
+        color: lighten($text, 10% );
+    }
+
+    &.button-lg{
+        line-height: 2;
+    }
+
+    &.button-primary{
+        background: $primary;
+        border-color: darken( $primary, 10%);
+        color:#fff;
+        &:disabled{
+            background: desaturate( $primary, 50% );
+            border-color: desaturate(darken( $primary, 10%), 50%);
+            color: desaturate( #FFF, 50% );
+        }
+        &:hover:not(:disabled){
+            color:#fff;
+            background: lighten($primary, 10% );
+        }
+    }
+    &.button-link{
+        font-weight: normal;
+        border: 0px;
+        &:hover{
+            color: $primary;
+        }
+    }
+}

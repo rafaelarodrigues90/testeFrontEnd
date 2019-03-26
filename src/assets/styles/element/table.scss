@@ -1,0 +1,24 @@
+.table{
+    width: 100%;
+    text-align: left;
+    border-spacing: 0px;
+    tr{
+        th{
+            background: $background;
+            color: $text-strong;
+        }
+        th,td{
+            padding: 0.5em 1.5em;
+        }
+        td{
+            border-bottom: $border;
+        }
+        &:last-child td{
+            border: 0px
+        }
+    }
+    .td-options{
+        width: 1em;
+    }
+
+}

@@ -1,0 +1,31 @@
+@import '../../../assets/styles/variables';
+
+section{
+    padding: 0 $padding;
+}
+.name{
+    color:$text-strong;
+    font-style: italic;
+    font-weight: bolder;
+}
+.avatar-wrapper{
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+    border-bottom: $border;
+    .avatar{
+        margin-bottom: $padding;
+    }
+}
+#back{
+    position: absolute;
+    bottom: calc( 50% - 1em);
+    left: 1em;
+    background: transparent;
+    font-size: 2em;
+}
+.list-group{
+    li:last-child{
+        border: 0px
+    }
+}
